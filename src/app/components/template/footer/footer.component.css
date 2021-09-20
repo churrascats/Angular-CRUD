@@ -1,0 +1,46 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.footer .typewriter {
+  margin-top: -1em;
+}
+
+.footer .typewriter a {
+  position: absolute;
+  right: 10px;
+  overflow: hidden;
+  border-right: 0.15em solid #3f51b5;
+  white-space: nowrap;
+  margin: 0 auto;
+  font-size: 0.8em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.15s step-end 25, remove-border 0s ease-in 3.5s forwards;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 11%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #3f51b5;
+  }
+}
+
+@keyframes remove-border {
+    to {
+        border-right: none;
+    }
+}
