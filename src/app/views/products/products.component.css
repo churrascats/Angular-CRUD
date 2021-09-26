@@ -1,0 +1,26 @@
+.add-product-button {
+  position: fixed;
+  right: 20px;
+  height: 80px;
+  width: 80px;
+  animation: shockwave 4s ease-out infinite;
+}
+
+@keyframes shockwave {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 0 2px #4c61d9, 0 0 0 5px #5067e6, 0 0 0 9px #4380bf;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+.add-product-button .mat-icon {
+  font-size: 50px;
+  height: 50px;
+  width: 50px;
+}
+
