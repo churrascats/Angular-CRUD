@@ -3,19 +3,21 @@
   right: 20px;
   height: 80px;
   width: 80px;
-  animation: shockwave 4s ease-out infinite;
+  animation: shockwave 3s ease-out infinite;
 }
 
 @keyframes shockwave {
   0% {
     box-shadow: none;
   }
+  40% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 1), 0 0 0 5px #5067e6, 0 0 0 9px #4380bf;
+  }
   50% {
-    box-shadow: 0 0 0 2px #4c61d9, 0 0 0 5px #5067e6, 0 0 0 9px #4380bf;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5), 0 0 0 6px rgba(255, 255, 255, 0.5),
+      0 0 0 11px rgba(255, 255, 255, 0.5);
   }
-  100% {
-    box-shadow: none;
-  }
+
 }
 
 .add-product-button .mat-icon {
@@ -23,4 +25,3 @@
   height: 50px;
   width: 50px;
 }
-

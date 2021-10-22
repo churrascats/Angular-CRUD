@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core'
+import { NgModule, LOCALE_ID } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 
 import { HttpClientModule } from '@angular/common/http'
@@ -24,9 +24,19 @@ import { FooterComponent } from './components/template/footer/footer.component'
 import { NavComponent } from './components/template/nav/nav.component'
 import { HomeComponent } from './views/home/home.component'
 import { ProductsComponent } from './views/products/products.component'
-import { ProductsCreateComponent } from './components/products/products-create/products-create.component';
-import { ProductsReadComponent } from './components/products/products-read/products-read.component';
-import { BigIconDirective } from './directives/big-icon.directive'
+import { ProductsCreateComponent } from './components/products/products-create/products-create.component'
+import { ProductsReadComponent } from './components/products/products-read/products-read.component'
+import { BigIconDirective } from './core/directives/big-icon.directive'
+import { ProductsReadReferenceComponent } from './components/products/products-read-reference/products-read-reference.component'
+import { MatTableModule } from '@angular/material/table'
+import { MatPaginatorModule } from '@angular/material/paginator'
+import { MatSortModule } from '@angular/material/sort'
+
+import localePt from '@angular/common/locales/pt'
+import { registerLocaleData } from '@angular/common';
+import { ProductUpdateComponent } from './components/products/product-update/product-update.component'
+
+registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
@@ -39,6 +49,8 @@ import { BigIconDirective } from './directives/big-icon.directive'
     ProductsCreateComponent,
     ProductsReadComponent,
     BigIconDirective,
+    ProductsReadReferenceComponent,
+    ProductUpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,9 +67,17 @@ import { BigIconDirective } from './directives/big-icon.directive'
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-BR',
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
