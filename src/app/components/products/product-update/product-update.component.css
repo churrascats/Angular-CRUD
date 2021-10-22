@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-div {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
